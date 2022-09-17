@@ -14,6 +14,18 @@ class GitCommand {
         /*
             Create logic here and run unit testing.
         */
+       let string_result = "";
+
+       if(Object.entries(this.working_directory.new_changes).length) {
+            string_result = `You have ${Object.entries(this.working_directory.new_changes).length} change/s.`;
+        	for(const dir of Object.entries(this.working_directory.new_changes)) {
+                string_result += `\n${dir[1].location}/${dir[1].name}`;
+            }
+       } else {
+            string_result = "You have 0 change/s.\n";
+       }
+
+       return string_result;
     }
 
     //Command: git add <filename/file directory/wildcard> 
