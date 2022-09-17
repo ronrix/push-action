@@ -59,6 +59,7 @@ class GitCommand {
     }
 
     // adding comment
+    // adding comment from feature/v2
 }
 
 
