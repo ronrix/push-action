@@ -1,8 +1,5 @@
 name: Github Actions Example
-on:
-  push:
-    branches: 
-      - "**"
+on: [push, pull_request]
 jobs:
   build:
     name: Build simple project
