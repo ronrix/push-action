@@ -3,7 +3,8 @@ on:
   push:
     branches: 
       - master
-      - feature/*
+      - feature/v1
+      - feature/v2
 jobs:
   build:
     name: Build simple project
