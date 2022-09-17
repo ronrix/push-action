@@ -25,4 +25,13 @@ describe("Testing GitCommand.status()", function(){
 
         expect(output).to.equal('You have 0 change/s.\n');
     });
+
+    it("should return information nothing to commit", function(){
+        let wd = new WorkingDirectory();
+        let git = new GitCommand(wd);
+        git.init();
+        let output = git.commit("git push origin master");
+
+        expect(output).to.equal('Nothing to commit.');
+    });
 })
