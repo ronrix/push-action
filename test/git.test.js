@@ -34,4 +34,8 @@ describe("Testing GitCommand.status()", function(){
 
         expect(output).to.equal('Nothing to commit.');
     });
+
+    it("should failed", function() {
+        expect("failed").to.be.equal("succes");
+    });
 })
